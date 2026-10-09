@@ -6,10 +6,10 @@ import React, { useState } from 'react';
  */
 export default function ImageWithFallback({
   src,
-  alt = 'LUMÉRA Editorial',
+  alt = 'FILLKART Editorial',
   className = '',
   aspectRatio = '4/5',
-  fallbackText = 'LUMÉRA'
+  fallbackText = 'FILLKART'
 }) {
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,7 +22,7 @@ export default function ImageWithFallback({
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-[#E6E0D6] to-[#F5F2EB] opacity-60" />
         <span className="font-serif-luxury tracking-widest text-lg font-medium text-[#2C2925] z-10">
-          LUMÉRA
+          FILLKART
         </span>
         <span className="text-[11px] tracking-widest uppercase text-[#736C62] mt-1 z-10 truncate max-w-[85%]">
           {alt || fallbackText}

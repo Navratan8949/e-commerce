@@ -17,8 +17,8 @@ export default function AdminSettings() {
   const [activeTab, setActiveTab] = useState('General');
 
   const [general, setGeneral] = useState({
-    storeName: 'LUMÉRA Atelier',
-    supportEmail: 'concierge@lumera.studio',
+    storeName: 'FILLKART Atelier',
+    supportEmail: 'concierge@fillkart.com',
     currency: 'INR (₹)',
     timezone: 'Asia/Kolkata (IST +5:30)'
   });
@@ -39,7 +39,7 @@ export default function AdminSettings() {
 
   const [profile, setProfile] = useState({
     adminName: 'Super Admin',
-    email: 'admin@lumera.studio',
+    email: 'admin@fillkart.com',
     role: 'Owner & Atelier Director',
     phone: '+91 98200 00001'
   });

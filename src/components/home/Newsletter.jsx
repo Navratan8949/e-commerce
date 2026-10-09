@@ -21,7 +21,7 @@ export default function Newsletter() {
     <section className="py-20 lg:py-24 bg-[#F2EFEB] border-t border-b border-[#E8E4DC]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <span className="text-[11px] uppercase tracking-[0.25em] text-[#8C857B] font-medium block mb-3">
-          The LUMÉRA Gazette
+          The FILLKART Gazette
         </span>
 
         <h2 className="font-serif-luxury text-3xl sm:text-4xl text-[#191919] font-light mb-4">
@@ -29,13 +29,13 @@ export default function Newsletter() {
         </h2>
 
         <p className="text-xs sm:text-sm text-[#696359] max-w-md mx-auto mb-8 font-light leading-relaxed">
-          Get early access to new collections, private offers, and stories from LUMÉRA.
+          Get early access to new collections, private offers, and stories from FILLKART.
         </p>
 
         {isSubscribed ? (
           <div className="inline-flex items-center gap-2.5 px-6 py-4 bg-[#FAF9F5] border border-[#DCD5C9] text-xs uppercase tracking-wider text-[#191919] shadow-xs">
             <Check className="w-4 h-4 text-[#2C5234]" />
-            <span>You're on the list. Welcome to LUMÉRA.</span>
+            <span>You're on the list. Welcome to FILLKART.</span>
           </div>
         ) : (
           <form

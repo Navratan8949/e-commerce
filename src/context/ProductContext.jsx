@@ -7,12 +7,12 @@ const ProductContext = createContext(null);
 
 export function ProductProvider({ children }) {
   const [products, setProducts] = useState(() => {
-    return storage.get('lumera_products', initialProducts);
+    return storage.get('fillkart_products', initialProducts);
   });
   const { showToast } = useToast();
 
   useEffect(() => {
-    storage.set('lumera_products', products);
+    storage.set('fillkart_products', products);
   }, [products]);
 
   const addProduct = (newProductData) => {
@@ -82,7 +82,7 @@ export function ProductProvider({ children }) {
 
   const resetToDefaultCatalog = () => {
     setProducts(initialProducts);
-    storage.set('lumera_products', initialProducts);
+    storage.set('fillkart_products', initialProducts);
     showToast('Catalog restored to default 28 atelier pieces.', 'info');
   };
 

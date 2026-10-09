@@ -22,7 +22,7 @@ import { useCurrency } from '../../context/CurrencyContext.jsx';
 /**
  * DemoSwitcherDock
  * Sleek architectural floating dock allowing instant switching between
- * the Customer-Facing Storefront and the LUMÉRA Admin Console.
+ * the Customer-Facing Storefront and the FILLKART Admin Console.
  */
 export default function DemoSwitcherDock() {
   const location = useLocation();
@@ -53,7 +53,7 @@ export default function DemoSwitcherDock() {
         type="button"
         onClick={() => setIsDismissed(false)}
         className="fixed bottom-4 right-4 z-50 px-3 py-2 bg-[#0B0C0E] text-white border border-neutral-800 shadow-2xl hover:bg-black transition-all flex items-center gap-2 text-[11px] uppercase tracking-wider font-mono rounded-xs cursor-pointer"
-        title="Open LUMÉRA Demo Controller"
+        title="Open FILLKART Demo Controller"
       >
         <Sliders className="w-3.5 h-3.5 text-[#C5A265]" />
         <span>Switch Views</span>
@@ -73,7 +73,7 @@ export default function DemoSwitcherDock() {
               {isAdminRoute ? 'Admin Console' : 'Storefront Mode'}
             </span>
             <span className="text-xs font-medium tracking-wide text-white leading-tight mt-0.5">
-              {isAdminRoute ? 'LUMÉRA Admin' : 'LUMÉRA Storefront'}
+              {isAdminRoute ? 'FILLKART Admin' : 'FILLKART Storefront'}
             </span>
           </div>
 
@@ -204,7 +204,7 @@ export default function DemoSwitcherDock() {
                 <span>+ Load Sample Cart</span>
               </button>
               <span className="text-[9.5px] font-mono text-neutral-400">
-                Code: <strong className="text-white">LUMERA10</strong>
+                Code: <strong className="text-white">FILLKART10</strong>
               </span>
             </div>
           </div>

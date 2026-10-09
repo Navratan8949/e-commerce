@@ -14,7 +14,7 @@ export default function Footer() {
               to="/"
               className="font-serif-luxury text-3xl tracking-[0.24em] uppercase font-light text-[#FFFFFF] block"
             >
-              LUMÉRA
+              FILLKART
             </Link>
             <p className="font-serif-luxury italic text-base text-[#D4CFC7] max-w-sm font-light">
               Elevate Your Everyday.
@@ -205,7 +205,7 @@ export default function Footer() {
                 Store Administrator Portal
               </span>
               <h5 className="font-serif-luxury text-base sm:text-lg text-white font-normal">
-                LUMÉRA Atelier Merchant Operating System
+                FILLKART Atelier Merchant Operating System
               </h5>
             </div>
           </div>
@@ -235,7 +235,7 @@ export default function Footer() {
         {/* Bottom Legal bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#736E66] gap-4">
           <p className="tracking-widest">
-            © 2026 LUMÉRA. ALL RIGHTS RESERVED.
+            © 2026 FILLKART. ALL RIGHTS RESERVED.
           </p>
           <div className="flex items-center gap-6 uppercase tracking-wider">
             <Link to="/faq" className="hover:text-[#FAF9F5] transition-colors">

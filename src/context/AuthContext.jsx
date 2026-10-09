@@ -7,7 +7,7 @@ const AuthContext = createContext(null);
 
 const DEFAULT_USER = {
   fullName: 'Eleanor Vance',
-  email: 'eleanor.vance@lumera.studio',
+  email: 'eleanor.vance@fillkart.com',
   phone: '+91 98201 44521',
   address: 'Penthouse 4B, The Imperial Heights, Worli Sea Face',
   city: 'Mumbai',
@@ -18,19 +18,19 @@ const DEFAULT_USER = {
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
-    return storage.get('lumera_user', DEFAULT_USER);
+    return storage.get('fillkart_user', DEFAULT_USER);
   });
 
   const [orders, setOrders] = useState(() => {
-    return storage.get('lumera_orders', initialOrders);
+    return storage.get('fillkart_orders', initialOrders);
   });
 
   useEffect(() => {
-    storage.set('lumera_user', user);
+    storage.set('fillkart_user', user);
   }, [user]);
 
   useEffect(() => {
-    storage.set('lumera_orders', orders);
+    storage.set('fillkart_orders', orders);
   }, [orders]);
 
   const updateProfile = (updatedFields) => {

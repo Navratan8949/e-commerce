@@ -1,6 +1,6 @@
 {
-  "name": "LUMÉRA — Luxury Storefront & Atelier Admin Console",
-  "description": "LUMÉRA luxury fashion & lifestyle storefront with full-featured Atelier Admin Console. Manage catalog, live orders, inventory, and analytics.",
+  "name": "FILLKART — Luxury Storefront & Atelier Admin Console",
+  "description": "FILLKART luxury fashion & lifestyle storefront with full-featured Atelier Admin Console. Manage catalog, live orders, inventory, and analytics.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

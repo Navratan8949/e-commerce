@@ -35,7 +35,7 @@ export default function OrderSuccessPage() {
         </h1>
 
         <p className="text-sm text-[#555048] max-w-md mx-auto leading-relaxed mb-8">
-          Thank you for shopping with LUMÉRA. Your order has been registered at our atelier and is being carefully prepared for transit.
+          Thank you for shopping with FILLKART. Your order has been registered at our atelier and is being carefully prepared for transit.
         </p>
 
         {/* Order Details Badge */}

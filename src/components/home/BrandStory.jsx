@@ -12,7 +12,7 @@ export default function BrandStory() {
         <div className="lg:col-span-6 relative aspect-4/5 bg-[#EBE7DF] overflow-hidden shadow-xs">
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=80"
-            alt="LUMÉRA Craftsmanship and Philosophy"
+            alt="FILLKART Craftsmanship and Philosophy"
             aspectRatio="4/5"
             className="w-full h-full object-cover"
           />
@@ -21,7 +21,7 @@ export default function BrandStory() {
         {/* Right Column Text */}
         <div className="lg:col-span-6 space-y-6">
           <span className="text-[11px] uppercase tracking-[0.25em] text-[#8C857B] font-medium block">
-            The LUMÉRA Philosophy
+            The FILLKART Philosophy
           </span>
 
           <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#191919] font-light leading-tight">
@@ -30,7 +30,7 @@ export default function BrandStory() {
 
           <div className="space-y-4 text-xs sm:text-sm text-[#555048] leading-relaxed font-light">
             <p className="text-base sm:text-lg text-[#262422] font-normal leading-relaxed">
-              LUMÉRA is built around the belief that great design doesn't need to shout. Every piece is thoughtfully considered, balancing timeless silhouettes with modern details.
+              FILLKART is built around the belief that great design doesn't need to shout. Every piece is thoughtfully considered, balancing timeless silhouettes with modern details.
             </p>
             <p>
               We collaborate with historic spinning mills in Normandy, family-run ateliers in Tuscany, and master artisans to create garments that feel intimate and enduring from the first touch.

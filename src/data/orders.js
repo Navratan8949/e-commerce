@@ -32,7 +32,7 @@ export const initialOrders = [
     estimatedDelivery: 'April 11, 2026',
     customer: {
       fullName: 'Eleanor Vance',
-      email: 'eleanor.vance@lumera.studio',
+      email: 'eleanor.vance@fillkart.com',
       phone: '+91 98201 44521',
       address: 'Penthouse 4B, The Imperial Heights, Worli Sea Face',
       city: 'Mumbai',
@@ -63,7 +63,7 @@ export const initialOrders = [
     estimatedDelivery: 'February 19, 2026',
     customer: {
       fullName: 'Eleanor Vance',
-      email: 'eleanor.vance@lumera.studio',
+      email: 'eleanor.vance@fillkart.com',
       phone: '+91 98201 44521',
       address: 'Penthouse 4B, The Imperial Heights, Worli Sea Face',
       city: 'Mumbai',

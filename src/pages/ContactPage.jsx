@@ -151,7 +151,7 @@ export default function ContactPage() {
                 <Mail className="w-4 h-4 text-[#191919] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-[#191919] block uppercase tracking-wider text-[11px]">Electronic Mail</strong>
-                  <a href="mailto:concierge@lumera.studio" className="hover:underline">concierge@lumera.studio</a>
+                  <a href="mailto:concierge@fillkart.com" className="hover:underline">concierge@fillkart.com</a>
                 </div>
               </div>
 

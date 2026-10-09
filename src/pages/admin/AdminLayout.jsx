@@ -523,7 +523,7 @@ export default function AdminLayout() {
               <div className="absolute right-0 mt-2 w-56 bg-white border border-[#E4E4E8] rounded-md shadow-xl py-2 z-50">
                 <div className="px-4 py-2 border-b border-neutral-100">
                   <p className="text-xs font-semibold text-neutral-900">Admin Console</p>
-                  <p className="text-[11px] text-neutral-500">admin@lumera.studio</p>
+                  <p className="text-[11px] text-neutral-500">admin@fillkart.com</p>
                   <span className="inline-block mt-1 text-[9px] uppercase font-mono px-1.5 py-0.5 bg-neutral-100 text-neutral-800 rounded-xs font-semibold">
                     Super Admin
                   </span>
@@ -583,7 +583,7 @@ export default function AdminLayout() {
             {!collapsed ? (
               <Link to="/admin" className="flex flex-col">
                 <span className="font-serif-luxury text-xl tracking-[0.2em] uppercase font-light text-white">
-                  LUMÉRA
+                  FILLKART
                 </span>
                 <span className="text-[9px] font-mono tracking-widest text-[#C5A265] -mt-0.5 font-semibold">
                   ADMIN CONSOLE
@@ -693,7 +693,7 @@ export default function AdminLayout() {
                   className="flex flex-col"
                 >
                   <span className="font-serif-luxury text-xl tracking-[0.2em] uppercase font-light text-white">
-                    LUMÉRA
+                    FILLKART
                   </span>
                   <span className="text-[9px] font-mono tracking-widest text-[#C5A265] -mt-0.5 font-semibold">
                     ADMIN CONSOLE

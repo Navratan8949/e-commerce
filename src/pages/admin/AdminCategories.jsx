@@ -17,7 +17,7 @@ export default function AdminCategories() {
   const { showToast } = useToast();
 
   const [categoriesList, setCategoriesList] = useState(() => {
-    return storage.get('lumera_admin_categories', initialCatList);
+    return storage.get('fillkart_admin_categories', initialCatList);
   });
 
   const [showAddModal, setShowAddModal] = useState(false);
@@ -72,7 +72,7 @@ export default function AdminCategories() {
         c.id === editingCategory.id ? { ...c, ...modalForm, slug } : c
       );
       setCategoriesList(updated);
-      storage.set('lumera_admin_categories', updated);
+      storage.set('fillkart_admin_categories', updated);
       showToast(`Updated category "${modalForm.name}"`, 'success');
     } else {
       const newCat = {
@@ -82,7 +82,7 @@ export default function AdminCategories() {
       };
       const updated = [...categoriesList, newCat];
       setCategoriesList(updated);
-      storage.set('lumera_admin_categories', updated);
+      storage.set('fillkart_admin_categories', updated);
       showToast(`Added category "${modalForm.name}"`, 'success');
     }
 
@@ -93,7 +93,7 @@ export default function AdminCategories() {
     if (window.confirm('Are you sure you want to delete this category?')) {
       const updated = categoriesList.filter((c) => c.id !== id);
       setCategoriesList(updated);
-      storage.set('lumera_admin_categories', updated);
+      storage.set('fillkart_admin_categories', updated);
       showToast('Category removed', 'info');
     }
   };

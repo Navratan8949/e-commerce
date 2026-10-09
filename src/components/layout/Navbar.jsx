@@ -79,7 +79,7 @@ export default function Navbar({ onOpenMobileMenu, onOpenSearch }) {
                 to="/"
                 className="inline-block font-serif-luxury text-2xl sm:text-3xl tracking-[0.22em] uppercase font-light text-[#191919] hover:opacity-85 transition-opacity"
               >
-                LUMÉRA
+                FILLKART
               </Link>
             </div>
 
@@ -135,7 +135,7 @@ export default function Navbar({ onOpenMobileMenu, onOpenSearch }) {
               <Link
                 to="/admin"
                 className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10.5px] uppercase tracking-wider font-mono bg-[#0B0C0E] text-white hover:bg-black transition-all shadow-xs border border-neutral-800"
-                title="Access LUMÉRA Admin Console"
+                title="Access FILLKART Admin Console"
               >
                 <Sliders className="w-3 h-3 text-[#C5A265]" />
                 <span className="font-semibold">Admin</span>

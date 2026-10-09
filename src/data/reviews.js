@@ -1,4 +1,4 @@
-// Realistic customer reviews for LUMÉRA products
+// Realistic customer reviews for FILLKART products
 
 export const mockReviews = [
   {
@@ -52,7 +52,7 @@ export const mockReviews = [
     rating: 5,
     date: 'January 29, 2026',
     title: 'Architectural minimalism done right',
-    comment: 'LUMÉRA reminds me of the best quiet-luxury boutiques in Tokyo and Milan. Clean lines, organic textures, and pieces you know will look just as good a decade from now.',
+    comment: 'FILLKART reminds me of the best quiet-luxury boutiques in Tokyo and Milan. Clean lines, organic textures, and pieces you know will look just as good a decade from now.',
     verified: true,
     fitRating: 'True to size'
   }

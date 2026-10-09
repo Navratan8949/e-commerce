@@ -163,7 +163,7 @@ export default function AdminProducts() {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', 'lumera_catalog_export.csv');
+    link.setAttribute('download', 'fillkart_catalog_export.csv');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -1,10 +1,10 @@
-// Comprehensive mock data for LUMÉRA Admin Console
+// Comprehensive mock data for FILLKART Admin Console
 
 export const initialCustomers = [
   {
     id: 'cust-1',
     name: 'Eleanor Vance',
-    email: 'eleanor.vance@lumera.studio',
+    email: 'eleanor.vance@fillkart.com',
     phone: '+91 98201 44521',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
     city: 'Mumbai',
@@ -251,7 +251,7 @@ export const adminNotifications = [
   {
     id: 'notif-4',
     title: 'Coupon Redemption Milestone',
-    description: 'Promo code LUMERA10 has been redeemed 82 times this week.',
+    description: 'Promo code FILLKART10 has been redeemed 82 times this week.',
     time: '1 day ago',
     unread: false,
     type: 'marketing',

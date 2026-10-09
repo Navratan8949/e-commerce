@@ -16,7 +16,7 @@ import { formatPrice } from '../../lib/utils.js';
 const INITIAL_COUPONS = [
   {
     id: 'c-1',
-    code: 'LUMERA10',
+    code: 'FILLKART10',
     type: 'Percentage',
     discount: 10,
     minOrder: 2999,
@@ -68,7 +68,7 @@ export default function AdminCoupons() {
   const { showToast } = useToast();
 
   const [coupons, setCoupons] = useState(() => {
-    return storage.get('lumera_admin_coupons', INITIAL_COUPONS);
+    return storage.get('fillkart_admin_coupons', INITIAL_COUPONS);
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -102,7 +102,7 @@ export default function AdminCoupons() {
 
     const updated = [newCoupon, ...coupons];
     setCoupons(updated);
-    storage.set('lumera_admin_coupons', updated);
+    storage.set('fillkart_admin_coupons', updated);
     showToast(`Created promotion code "${newCoupon.code}"`, 'success');
     setShowModal(false);
   };
@@ -110,7 +110,7 @@ export default function AdminCoupons() {
   const handleDeleteCoupon = (id) => {
     const updated = coupons.filter((c) => c.id !== id);
     setCoupons(updated);
-    storage.set('lumera_admin_coupons', updated);
+    storage.set('fillkart_admin_coupons', updated);
     showToast('Promotion code archived', 'info');
   };
 

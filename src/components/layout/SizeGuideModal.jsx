@@ -28,7 +28,7 @@ export default function SizeGuideModal({ isOpen, onClose }) {
         <div className="flex items-center justify-between pb-4 border-b border-[#E8E4DC]">
           <div>
             <span className="text-[10px] uppercase tracking-[0.2em] text-[#8C857B]">
-              LUMÉRA Atelier
+              FILLKART Atelier
             </span>
             <h3 className="font-serif-luxury text-2xl text-[#191919]">
               Size & Measurement Guide
@@ -45,7 +45,7 @@ export default function SizeGuideModal({ isOpen, onClose }) {
 
         <div className="py-6 space-y-6">
           <p className="text-xs text-[#696359] leading-relaxed">
-            All LUMÉRA garments are engineered using European tailoring standards with generous ease for relaxed, unrestrictive movement. If between sizes, we recommend sizing down for a closer fit or choosing your customary size for an editorial drape.
+            All FILLKART garments are engineered using European tailoring standards with generous ease for relaxed, unrestrictive movement. If between sizes, we recommend sizing down for a closer fit or choosing your customary size for an editorial drape.
           </p>
 
           {/* Table */}
@@ -106,7 +106,7 @@ export default function SizeGuideModal({ isOpen, onClose }) {
               Need personalized fitting advice?
             </strong>
             <p>
-              Our client concierge team is available via concierge@lumera.studio to provide bespoke advice on measurements and custom sleeve/hem alterations.
+              Our client concierge team is available via concierge@fillkart.com to provide bespoke advice on measurements and custom sleeve/hem alterations.
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* 1. Hero Section */}
       <section className="text-center max-w-3xl mx-auto space-y-4">
         <span className="text-[11px] uppercase tracking-[0.3em] text-[#8C857B] font-medium block">
-          The Maison LUMÉRA
+          The Maison FILLKART
         </span>
         <h1 className="font-serif-luxury text-4xl sm:text-6xl text-[#191919] font-light leading-tight">
           Quiet luxury. Architectural permanence.
@@ -24,7 +24,7 @@ export default function AboutPage() {
       <div className="relative aspect-16/9 sm:aspect-21/9 w-full bg-[#EAE5DC] overflow-hidden shadow-xs">
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=80"
-          alt="LUMÉRA Atelier Workshop"
+          alt="FILLKART Atelier Workshop"
           aspectRatio="16/9"
           className="w-full h-full object-cover"
         />
@@ -42,7 +42,7 @@ export default function AboutPage() {
         </div>
         <div className="lg:col-span-7 space-y-4 text-xs sm:text-sm text-[#555048] font-light leading-relaxed">
           <p className="text-base text-[#191919] font-normal leading-relaxed">
-            LUMÉRA was conceived in 2024 to challenge the rapid obsolescence of contemporary fast fashion. We believe that genuine elegance is achieved not by adding more, but by paring down to what is mathematically essential.
+            FILLKART was conceived in 2024 to challenge the rapid obsolescence of contemporary fast fashion. We believe that genuine elegance is achieved not by adding more, but by paring down to what is mathematically essential.
           </p>
           <p>
             Every piece in our catalog begins as a study in proportion: where the sleeve naturally terminates against the wrist, how a collar frames the jawline without constricting, and how a drape moves with the momentum of an urban stride.

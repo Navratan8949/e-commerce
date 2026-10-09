@@ -17,7 +17,7 @@ export default function AdminCampaigns() {
   const { showToast } = useToast();
 
   const [campaigns, setCampaigns] = useState(() => {
-    return storage.get('lumera_admin_campaigns', initialCampaigns);
+    return storage.get('fillkart_admin_campaigns', initialCampaigns);
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -43,7 +43,7 @@ export default function AdminCampaigns() {
     };
     const updated = [newCamp, ...campaigns];
     setCampaigns(updated);
-    storage.set('lumera_admin_campaigns', updated);
+    storage.set('fillkart_admin_campaigns', updated);
     showToast(`Campaign "${form.name}" scheduled`, 'success');
     setShowModal(false);
   };

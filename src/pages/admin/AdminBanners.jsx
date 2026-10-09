@@ -17,7 +17,7 @@ export default function AdminBanners() {
   const { showToast } = useToast();
 
   const [banners, setBanners] = useState(() => {
-    return storage.get('lumera_admin_banners', initialBanners);
+    return storage.get('fillkart_admin_banners', initialBanners);
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -36,7 +36,7 @@ export default function AdminBanners() {
       b.id === id ? { ...b, status: b.status === 'Active' ? 'Inactive' : 'Active' } : b
     );
     setBanners(updated);
-    storage.set('lumera_admin_banners', updated);
+    storage.set('fillkart_admin_banners', updated);
     showToast('Banner status updated', 'info');
   };
 
@@ -44,7 +44,7 @@ export default function AdminBanners() {
     if (window.confirm('Delete this banner?')) {
       const updated = banners.filter((b) => b.id !== id);
       setBanners(updated);
-      storage.set('lumera_admin_banners', updated);
+      storage.set('fillkart_admin_banners', updated);
       showToast('Banner removed', 'info');
     }
   };
@@ -60,7 +60,7 @@ export default function AdminBanners() {
     };
     const updated = [...banners, newBanner];
     setBanners(updated);
-    storage.set('lumera_admin_banners', updated);
+    storage.set('fillkart_admin_banners', updated);
     showToast('Banner saved', 'success');
     setShowModal(false);
   };

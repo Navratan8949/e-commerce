@@ -6,12 +6,12 @@ const WishlistContext = createContext(null);
 
 export function WishlistProvider({ children }) {
   const [wishlist, setWishlist] = useState(() => {
-    return storage.get('lumera_wishlist', []);
+    return storage.get('fillkart_wishlist', []);
   });
   const { showToast } = useToast();
 
   useEffect(() => {
-    storage.set('lumera_wishlist', wishlist);
+    storage.set('fillkart_wishlist', wishlist);
   }, [wishlist]);
 
   const isInWishlist = (productId) => {

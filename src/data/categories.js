@@ -1,4 +1,4 @@
-// LUMÉRA Curated Categories
+// FILLKART Curated Categories
 
 export const categories = [
   {
@@ -39,7 +39,7 @@ export const categories = [
     description: 'Fresh silhouettes. Architectural coats. Tactile knitwear. Discover the latest releases.',
     image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=1200&q=80',
     itemCount: '10 New Styles',
-    tagline: 'The latest expressions of LUMÉRA.'
+    tagline: 'The latest expressions of FILLKART.'
   }
 ];
 

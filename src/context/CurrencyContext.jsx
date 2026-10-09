@@ -12,11 +12,11 @@ export const CURRENCIES = {
 
 export function CurrencyProvider({ children }) {
   const [currency, setCurrency] = useState(() => {
-    return storage.get('lumera_currency', 'INR');
+    return storage.get('fillkart_currency', 'INR');
   });
 
   useEffect(() => {
-    storage.set('lumera_currency', currency);
+    storage.set('fillkart_currency', currency);
   }, [currency]);
 
   const activeCurrency = CURRENCIES[currency] || CURRENCIES.INR;

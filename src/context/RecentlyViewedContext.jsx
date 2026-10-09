@@ -5,11 +5,11 @@ const RecentlyViewedContext = createContext(null);
 
 export function RecentlyViewedProvider({ children }) {
   const [recentlyViewed, setRecentlyViewed] = useState(() => {
-    return storage.get('lumera_recently_viewed', []);
+    return storage.get('fillkart_recently_viewed', []);
   });
 
   useEffect(() => {
-    storage.set('lumera_recently_viewed', recentlyViewed);
+    storage.set('fillkart_recently_viewed', recentlyViewed);
   }, [recentlyViewed]);
 
   const addRecentlyViewed = (product) => {

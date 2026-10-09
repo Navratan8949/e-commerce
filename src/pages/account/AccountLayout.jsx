@@ -28,7 +28,7 @@ export default function AccountLayout() {
             Welcome, {user.fullName}
           </h1>
           <p className="text-xs text-[#736C62] font-light mt-1">
-            Member of the LUMÉRA Collective since {user.memberSince || '2025'}
+            Member of the FILLKART Collective since {user.memberSince || '2025'}
           </p>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function AccountLayout() {
               Concierge Service
             </span>
             <p className="leading-relaxed">
-              Direct liaison available Monday – Saturday for bespoke fittings and dispatch queries: concierge@lumera.studio
+              Direct liaison available Monday – Saturday for bespoke fittings and dispatch queries: concierge@fillkart.com
             </p>
           </div>
         </aside>

@@ -1,4 +1,4 @@
-// LUMÉRA Curated Product Catalog — 28 Luxury Fashion & Lifestyle Essentials
+// FILLKART Curated Product Catalog — 28 Luxury Fashion & Lifestyle Essentials
 
 const products = [
   // --- WOMEN (6 Products) ---
@@ -542,7 +542,7 @@ const products = [
       'Full-grain English bridle leather (3.5mm thick)',
       'Solid zinc alloy buckle with satin finish',
       'Hand-painted and burnished edges',
-      'Stamped with discreet LUMÉRA monogram'
+      'Stamped with discreet FILLKART monogram'
     ],
     care: ['Condition with leather wax once a year'],
     images: [

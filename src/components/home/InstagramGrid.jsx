@@ -49,7 +49,7 @@ export default function InstagramGrid() {
           rel="noreferrer"
           className="font-serif-luxury text-3xl sm:text-4xl text-[#191919] hover:opacity-80 transition-opacity inline-flex items-center gap-2"
         >
-          <span>@lumera.studio</span>
+          <span>@fillkart.official</span>
           <ArrowUpRight className="w-5 h-5 text-[#8C857B]" />
         </a>
       </div>
@@ -67,7 +67,7 @@ export default function InstagramGrid() {
           >
             <ImageWithFallback
               src={post.image}
-              alt="LUMÉRA Instagram Editorial"
+              alt="FILLKART Instagram Editorial"
               aspectRatio="1/1"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
             />

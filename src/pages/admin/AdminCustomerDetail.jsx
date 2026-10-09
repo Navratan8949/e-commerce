@@ -148,7 +148,7 @@ export default function AdminCustomerDetail() {
           <div className="md:col-span-8 bg-white border border-[#E8E6E1] p-6 rounded-lg shadow-xs space-y-4">
             <h3 className="font-serif-luxury text-lg text-[#191919]">Patron Relationship Summary</h3>
             <p className="text-xs text-[#6E6961] leading-relaxed">
-              This client is enrolled in LUMÉRA Private Atelier salon service. Has a zero-return rate across all 4 past orders. Prefers natural dyes, unbleached linens, and tailored suits.
+              This client is enrolled in FILLKART Private Atelier salon service. Has a zero-return rate across all 4 past orders. Prefers natural dyes, unbleached linens, and tailored suits.
             </p>
 
             <div className="pt-4 border-t border-[#F2EFE9] space-y-3">
@@ -278,7 +278,7 @@ export default function AdminCustomerDetail() {
             <div className="flex items-center gap-3">
               <span className="w-2 h-2 rounded-full bg-[#8C7A6B]" />
               <span className="font-mono text-[#8C7A6B]">Jan 15, 2025</span>
-              <span>Joined LUMÉRA Atelier Private Patron program</span>
+              <span>Joined FILLKART Atelier Private Patron program</span>
             </div>
           </div>
         </div>

@@ -55,7 +55,7 @@ export default function ShopPage({ onQuickView }) {
     if (!selectedCategory || selectedCategory === 'all') {
       return {
         title: 'Complete Collection',
-        subtitle: 'Discover the complete LUMÉRA catalog of modern essentials, architectural tailoring, and natural textiles.'
+        subtitle: 'Discover the complete FILLKART catalog of modern essentials, architectural tailoring, and natural textiles.'
       };
     }
     const cat = categories.find((c) => c.slug === selectedCategory);
@@ -67,7 +67,7 @@ export default function ShopPage({ onQuickView }) {
     }
     return {
       title: 'Shop',
-      subtitle: 'Discover the LUMÉRA collection.'
+      subtitle: 'Discover the FILLKART collection.'
     };
   }, [selectedCategory]);
 

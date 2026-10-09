@@ -21,7 +21,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'How do I choose my size?',
-    a: 'LUMÉRA garments are engineered with relaxed, architectural tailoring. Each product page features exact garment measurements in inches and centimeters, as well as an interactive Size Guide. If you are between sizes, we recommend sizing down for a tailored silhouette or taking your true size for our signature editorial drape.'
+    a: 'FILLKART garments are engineered with relaxed, architectural tailoring. Each product page features exact garment measurements in inches and centimeters, as well as an interactive Size Guide. If you are between sizes, we recommend sizing down for a tailored silhouette or taking your true size for our signature editorial drape.'
   },
   {
     q: 'Do you offer international shipping?',
@@ -29,7 +29,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'How can I contact support?',
-    a: 'Our dedicated client concierge is available Monday through Saturday from 10:00 AM to 7:30 PM IST via email at concierge@lumera.studio or phone at +91 (022) 8401 9200. You may also submit inquiries through our online Contact Concierge form for priority response.'
+    a: 'Our dedicated client concierge is available Monday through Saturday from 10:00 AM to 7:30 PM IST via email at concierge@fillkart.com or phone at +91 (022) 8401 9200. You may also submit inquiries through our online Contact Concierge form for priority response.'
   }
 ];
 

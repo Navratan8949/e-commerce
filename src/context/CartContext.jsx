@@ -9,22 +9,22 @@ const STANDARD_SHIPPING_FEE = 250;
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState(() => {
-    return storage.get('lumera_cart', []);
+    return storage.get('fillkart_cart', []);
   });
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [appliedCoupon, setAppliedCoupon] = useState(() => {
-    return storage.get('lumera_coupon', null);
+    return storage.get('fillkart_coupon', null);
   });
 
   const { showToast } = useToast();
 
   useEffect(() => {
-    storage.set('lumera_cart', cart);
+    storage.set('fillkart_cart', cart);
   }, [cart]);
 
   useEffect(() => {
-    storage.set('lumera_coupon', appliedCoupon);
+    storage.set('fillkart_coupon', appliedCoupon);
   }, [appliedCoupon]);
 
   const openDrawer = () => setIsDrawerOpen(true);
@@ -94,7 +94,7 @@ export function CartProvider({ children }) {
 
   const discountAmount = useMemo(() => {
     if (!appliedCoupon || subtotal === 0) return 0;
-    if (appliedCoupon.code === 'LUMERA10') {
+    if (appliedCoupon.code === 'FILLKART10') {
       return Math.round(subtotal * 0.1);
     }
     if (appliedCoupon.code === 'WELCOME500') {
@@ -124,11 +124,11 @@ export function CartProvider({ children }) {
       return { success: false, message: 'Promo code is already applied.' };
     }
 
-    if (code === 'LUMERA10') {
-      const couponObj = { code: 'LUMERA10', type: 'percentage', value: 10, description: '10% off entire order' };
+    if (code === 'FILLKART10' || code === 'LUMERA10') {
+      const couponObj = { code: 'FILLKART10', type: 'percentage', value: 10, description: '10% off entire order' };
       setAppliedCoupon(couponObj);
       showToast('10% discount applied!', 'success');
-      return { success: true, message: 'Coupon LUMERA10 applied!' };
+      return { success: true, message: 'Coupon FILLKART10 applied!' };
     }
 
     if (code === 'WELCOME500') {
@@ -142,7 +142,7 @@ export function CartProvider({ children }) {
       return { success: true, message: 'Coupon WELCOME500 applied!' };
     }
 
-    showToast('Invalid promo code. Try LUMERA10 or WELCOME500.', 'error');
+    showToast('Invalid promo code. Try FILLKART10 or WELCOME500.', 'error');
     return { success: false, message: 'Invalid promo code.' };
   };
 

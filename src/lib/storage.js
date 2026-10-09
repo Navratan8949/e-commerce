@@ -1,4 +1,4 @@
-// Safe localStorage wrapper for LUMÉRA
+// Safe localStorage wrapper for FILLKART
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -6,7 +6,11 @@ export const storage = {
   get: (key, defaultValue = null) => {
     if (!isBrowser) return defaultValue;
     try {
-      const item = window.localStorage.getItem(key);
+      let item = window.localStorage.getItem(key);
+      if (!item && key.startsWith('fillkart_')) {
+        const legacyKey = key.replace('fillkart_', 'lumera_');
+        item = window.localStorage.getItem(legacyKey);
+      }
       return item ? JSON.parse(item) : defaultValue;
     } catch (error) {
       console.warn(`Error reading localStorage key "${key}":`, error);

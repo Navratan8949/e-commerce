@@ -19,7 +19,7 @@ export default function CheckoutPage() {
   // Form State
   const [formData, setFormData] = useState({
     fullName: user?.fullName || 'Eleanor Vance',
-    email: user?.email || 'eleanor.vance@lumera.studio',
+    email: user?.email || 'eleanor.vance@fillkart.com',
     phone: user?.phone || '+91 98201 44521',
     address: user?.address || 'Penthouse 4B, The Imperial Heights, Worli Sea Face',
     city: user?.city || 'Mumbai',

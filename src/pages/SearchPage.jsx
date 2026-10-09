@@ -39,7 +39,7 @@ export default function SearchPage({ onQuickView }) {
     });
   }, [searchTerm]);
 
-  const queryKicker = searchTerm ? `Search results for "${searchTerm}"` : 'Explore the full LUMÉRA catalog';
+  const queryKicker = searchTerm ? `Search results for "${searchTerm}"` : 'Explore the full FILLKART catalog';
 
   return (
     <div className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

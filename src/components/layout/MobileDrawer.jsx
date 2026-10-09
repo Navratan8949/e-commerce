@@ -46,7 +46,7 @@ export default function MobileDrawer({ isOpen, onClose }) {
               onClick={onClose}
               className="font-serif-luxury text-2xl tracking-[0.22em] uppercase font-light text-[#191919]"
             >
-              LUMÉRA
+              FILLKART
             </Link>
             <button
               onClick={onClose}

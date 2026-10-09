@@ -1,4 +1,4 @@
-// Utility functions for LUMÉRA
+// Utility functions for FILLKART
 
 /**
  * Format price in Indian Rupee format (e.g. ₹3,499)

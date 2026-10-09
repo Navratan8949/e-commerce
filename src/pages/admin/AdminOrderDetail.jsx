@@ -252,7 +252,7 @@ export default function AdminOrderDetail() {
               <p className="font-semibold text-[#191919]">
                 {order.customer?.fullName || 'Eleanor Vance'}
               </p>
-              <p className="text-[#6E6961]">{order.customer?.email || 'eleanor.vance@lumera.studio'}</p>
+              <p className="text-[#6E6961]">{order.customer?.email || 'eleanor.vance@fillkart.com'}</p>
               <p className="text-[#6E6961] font-mono">{order.customer?.phone || '+91 98201 44521'}</p>
               <span className="inline-block mt-2 text-[10px] uppercase font-mono px-2 py-0.5 bg-[#EFECE6] text-[#4A4742] rounded-xs font-semibold">
                 VIP Patron

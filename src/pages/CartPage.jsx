@@ -290,7 +290,7 @@ export default function CartPage() {
                     </button>
                   </div>
                   <div className="text-[10px] text-[#8C857B] tracking-wider uppercase space-x-2">
-                    <span>Try: <strong className="text-[#191919]">LUMERA10</strong> (10% off) or <strong className="text-[#191919]">WELCOME500</strong></span>
+                    <span>Try: <strong className="text-[#191919]">FILLKART10</strong> (10% off) or <strong className="text-[#191919]">WELCOME500</strong></span>
                   </div>
                 </form>
               )}

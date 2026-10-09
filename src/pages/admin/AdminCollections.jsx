@@ -17,7 +17,7 @@ export default function AdminCollections() {
   const { showToast } = useToast();
 
   const [collections, setCollections] = useState(() => {
-    return storage.get('lumera_admin_collections', initialCollections);
+    return storage.get('fillkart_admin_collections', initialCollections);
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -65,7 +65,7 @@ export default function AdminCollections() {
       c.id === id ? { ...c, status: c.status === 'Active' ? 'Draft' : 'Active' } : c
     );
     setCollections(updated);
-    storage.set('lumera_admin_collections', updated);
+    storage.set('fillkart_admin_collections', updated);
     showToast('Collection status updated', 'info');
   };
 
@@ -73,7 +73,7 @@ export default function AdminCollections() {
     if (window.confirm('Delete this collection?')) {
       const updated = collections.filter((c) => c.id !== id);
       setCollections(updated);
-      storage.set('lumera_admin_collections', updated);
+      storage.set('fillkart_admin_collections', updated);
       showToast('Collection deleted', 'info');
     }
   };
@@ -92,7 +92,7 @@ export default function AdminCollections() {
         c.id === editingItem.id ? { ...c, ...form, slug } : c
       );
       setCollections(updated);
-      storage.set('lumera_admin_collections', updated);
+      storage.set('fillkart_admin_collections', updated);
       showToast(`Updated "${form.name}"`, 'success');
     } else {
       const newCol = {
@@ -103,7 +103,7 @@ export default function AdminCollections() {
       };
       const updated = [...collections, newCol];
       setCollections(updated);
-      storage.set('lumera_admin_collections', updated);
+      storage.set('fillkart_admin_collections', updated);
       showToast(`Created collection "${form.name}"`, 'success');
     }
 

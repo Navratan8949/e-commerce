@@ -258,7 +258,7 @@ export default function AdminOrders() {
                           {order.customer?.fullName || 'Eleanor Vance'}
                         </p>
                         <p className="text-[11px] text-neutral-400">
-                          {order.customer?.email || 'patron@lumera.studio'}
+                          {order.customer?.email || 'patron@fillkart.com'}
                         </p>
                       </td>
 

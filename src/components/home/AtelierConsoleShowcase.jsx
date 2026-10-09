@@ -67,7 +67,7 @@ export default function AtelierConsoleShowcase() {
                 <span className="w-3 h-3 rounded-full bg-[#10B981]/80" />
               </div>
               <span className="font-mono text-xs text-[#A89F91] tracking-wider hidden sm:inline">
-                lumera.atelier/admin/console — v2.4 Live
+                fillkart.atelier/admin/console — v2.4 Live
               </span>
             </div>
 
@@ -227,7 +227,7 @@ export default function AtelierConsoleShowcase() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
-                    { code: 'LUMERA10', discount: '10% Off Orders', desc: 'Valid across entire catalog' },
+                    { code: 'FILLKART10', discount: '10% Off Orders', desc: 'Valid across entire catalog' },
                     { code: 'WELCOME500', discount: '₹500 Off', desc: 'On orders over ₹3,999' },
                     { code: 'ATELIERVIP', discount: '15% Off Private Salon', desc: 'High-value patron privilege' }
                   ].map((c) => (
