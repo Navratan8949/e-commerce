@@ -237,6 +237,17 @@ export default function Footer() {
           <p className="tracking-widest">
             © 2026 FILLKART. ALL RIGHTS RESERVED.
           </p>
+          <div className="flex items-center gap-1.5 tracking-wider">
+            <span>Designed by</span>
+            <a
+              href="https://www.codepecharcha.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4AF37] hover:text-[#FAF9F5] transition-colors font-medium hover:underline"
+            >
+              Code Pe Charcha
+            </a>
+          </div>
           <div className="flex items-center gap-6 uppercase tracking-wider">
             <Link to="/faq" className="hover:text-[#FAF9F5] transition-colors">
               Privacy Policy
