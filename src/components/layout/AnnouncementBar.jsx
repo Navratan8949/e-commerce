@@ -3,9 +3,18 @@ import { ChevronLeft, ChevronRight, Sliders } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const MESSAGES = [
-  'FREE SHIPPING ON ORDERS OVER ₹2,999  •  COMPLIMENTARY 7-DAY RETURNS',
-  'SPRING / SUMMER 2026 CAPSULE  •  FRENCH FLAX & GRADE-A CASHMERE',
-  '✦ ATELIER MERCHANT CONSOLE ONLINE  •  MANAGE CATALOG, ORDERS & DISCOUNTS'
+  {
+    desktop: 'FREE SHIPPING ON ORDERS OVER ₹2,999  •  COMPLIMENTARY 7-DAY RETURNS',
+    mobile: 'FREE SHIPPING ABOVE ₹2,999  •  7-DAY RETURNS'
+  },
+  {
+    desktop: 'SPRING / SUMMER 2026 CAPSULE  •  FRENCH FLAX & GRADE-A CASHMERE',
+    mobile: 'SPRING / SUMMER 2026  •  FRENCH FLAX & CASHMERE'
+  },
+  {
+    desktop: '✦ ATELIER MERCHANT CONSOLE ONLINE  •  MANAGE CATALOG, ORDERS & DISCOUNTS',
+    mobile: '✦ ATELIER ADMIN  •  MANAGE CATALOG & ORDERS'
+  }
 ];
 
 export default function AnnouncementBar() {
@@ -27,20 +36,21 @@ export default function AnnouncementBar() {
   };
 
   return (
-    <div className="w-full bg-[#161514] text-[#FAF9F5] py-2 px-3 sm:px-6 text-[10px] sm:text-[10.5px] tracking-[0.22em] uppercase font-medium select-none z-50 border-b border-[#282624]">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+    <div className="w-full bg-[#161514] text-[#FAF9F5] py-2 px-2 sm:px-6 text-[9.5px] sm:text-[10.5px] tracking-[0.14em] sm:tracking-[0.22em] uppercase font-medium select-none z-50 border-b border-[#282624]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-1 sm:gap-2">
         {/* Subtle Prev button */}
         <button
           onClick={handlePrev}
-          className="text-[#888] hover:text-white transition-colors p-1 shrink-0"
+          className="text-[#888] hover:text-white transition-colors p-1 shrink-0 cursor-pointer"
           aria-label="Previous announcement"
         >
           <ChevronLeft className="w-3.5 h-3.5" />
         </button>
 
         {/* Message */}
-        <div className="flex-1 text-center truncate px-2 transition-opacity duration-500">
-          <span className="font-light tracking-[0.2em]">{MESSAGES[index]}</span>
+        <div className="flex-1 text-center truncate px-1 sm:px-2 transition-opacity duration-500">
+          <span className="sm:hidden font-light tracking-[0.12em]">{MESSAGES[index].mobile}</span>
+          <span className="hidden sm:inline font-light tracking-[0.2em]">{MESSAGES[index].desktop}</span>
         </div>
 
         {/* Subtle Next button */}

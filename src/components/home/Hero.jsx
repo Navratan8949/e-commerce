@@ -78,10 +78,10 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
         
         {/* Editorial Sub-header badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/15 text-[10.5px] uppercase tracking-[0.3em] font-medium text-[#E3DDD1] mb-5">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 bg-white/10 backdrop-blur-md border border-white/15 text-[9px] sm:text-[10.5px] uppercase tracking-[0.16em] sm:tracking-[0.28em] font-medium text-[#E3DDD1] mb-4 sm:mb-5 max-w-[92vw] truncate">
           <span>THE NEW STANDARD</span>
           <span className="text-white/40">·</span>
-          <span>{current.tag}</span>
+          <span className="truncate">{current.tag}</span>
         </div>
 
         {/* Primary Headline */}

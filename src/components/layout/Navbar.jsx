@@ -50,41 +50,33 @@ export default function Navbar({ onOpenMobileMenu, onOpenSearch }) {
       <header
         className={`w-full transition-all duration-300 border-b ${headerBgClass}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-18 sm:h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="relative flex items-center justify-between h-16 sm:h-18 lg:h-20">
             
-            {/* Mobile menu button & search */}
-            <div className="flex items-center gap-3 lg:hidden">
+            {/* Zone 1: Mobile Hamburger Button */}
+            <div className="flex items-center lg:hidden z-10">
               <button
                 type="button"
                 onClick={onOpenMobileMenu}
-                className="p-2 -ml-2 text-[#191919] hover:opacity-70 transition-opacity focus-visible:outline-hidden cursor-pointer"
+                className="p-2 -ml-1 text-[#191919] hover:opacity-70 transition-opacity focus-visible:outline-hidden cursor-pointer"
                 aria-label="Open mobile menu"
               >
                 <Menu className="w-5 h-5 stroke-[1.5]" />
               </button>
-              <button
-                type="button"
-                onClick={onOpenSearch}
-                className="p-2 text-[#191919] hover:opacity-70 transition-opacity focus-visible:outline-hidden cursor-pointer"
-                aria-label="Search"
-              >
-                <Search className="w-5 h-5 stroke-[1.5]" />
-              </button>
             </div>
 
-            {/* Zone 1: Brand Wordmark */}
-            <div className="flex-1 lg:flex-initial text-center lg:text-left">
+            {/* Zone 2: Brand Wordmark (Dead-center on mobile, Left on desktop) */}
+            <div className="lg:static absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-auto text-center lg:text-left z-0 pointer-events-auto">
               <Link
                 to="/"
-                className="inline-block font-serif-luxury text-2xl sm:text-3xl tracking-[0.22em] uppercase font-light text-[#191919] hover:opacity-85 transition-opacity"
+                className="inline-block font-serif-luxury text-xl sm:text-2xl lg:text-3xl tracking-[0.18em] sm:tracking-[0.22em] uppercase font-light text-[#191919] hover:opacity-85 transition-opacity whitespace-nowrap"
               >
                 FILLKART
               </Link>
             </div>
 
-            {/* Zone 2: Navigation Links with MegaMenu hover */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            {/* Zone 3: Navigation Links with MegaMenu hover (Desktop only) */}
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 ml-8 xl:ml-12">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.href;
                 return (
@@ -112,8 +104,8 @@ export default function Navbar({ onOpenMobileMenu, onOpenSearch }) {
               })}
             </nav>
 
-            {/* Zone 3: Actions (Currency Switcher, Admin, Search, Account, Wishlist, Bag) */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
+            {/* Zone 4: Actions (Responsive, right-aligned, zero cut-off) */}
+            <div className="flex items-center gap-0.5 sm:gap-1.5 md:gap-2 lg:gap-3 xl:gap-4 z-10 ml-auto">
               
               {/* Currency Switcher */}
               <div className="hidden xl:flex items-center gap-1 text-[11px] font-mono text-[#696359] border-r border-[#E0D9CC] pr-3">
@@ -131,57 +123,60 @@ export default function Navbar({ onOpenMobileMenu, onOpenSearch }) {
                 </select>
               </div>
 
-              {/* Direct Admin Link - Unmistakable across all screens */}
+              {/* Direct Admin Link - Visible on tablet/desktop (md+), kept in drawer on mobile */}
               <Link
                 to="/admin"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10.5px] uppercase tracking-wider font-mono bg-[#0B0C0E] text-white hover:bg-black transition-all shadow-xs border border-neutral-800"
+                className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 text-[10.5px] uppercase tracking-wider font-mono bg-[#0B0C0E] text-white hover:bg-black transition-all shadow-xs border border-neutral-800"
                 title="Access FILLKART Admin Console"
               >
                 <Sliders className="w-3 h-3 text-[#C5A265]" />
                 <span className="font-semibold">Admin</span>
               </Link>
 
-              {/* Live Search Trigger */}
+              {/* Live Search Trigger - Clean icon on all screen sizes */}
               <button
                 type="button"
                 onClick={onOpenSearch}
-                className="hidden lg:flex p-1.5 text-[#191919] hover:opacity-70 transition-opacity cursor-pointer"
+                className="p-2 text-[#191919] hover:opacity-70 transition-opacity cursor-pointer"
                 aria-label="Search catalog"
               >
                 <Search className="w-5 h-5 stroke-[1.5]" />
               </button>
 
+              {/* User Account Link - Visible on sm+ */}
               <Link
                 to="/account"
-                className="p-1.5 text-[#191919] hover:opacity-70 transition-opacity"
+                className="hidden sm:inline-flex p-2 text-[#191919] hover:opacity-70 transition-opacity"
                 aria-label="My account"
               >
                 <User className="w-5 h-5 stroke-[1.5]" />
               </Link>
 
+              {/* Wishlist Link */}
               <Link
                 to="/wishlist"
-                className="relative p-1.5 text-[#191919] hover:opacity-70 transition-opacity"
+                className="relative p-2 text-[#191919] hover:opacity-70 transition-opacity"
                 aria-label={`Wishlist, ${wishlistCount} items`}
               >
                 <Heart className="w-5 h-5 stroke-[1.5]" />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#191919] text-[#FAF9F5] text-[9px] font-semibold flex items-center justify-center tabular-nums">
+                  <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#191919] text-[#FAF9F5] text-[9px] font-semibold flex items-center justify-center tabular-nums">
                     {wishlistCount}
                   </span>
                 )}
               </Link>
 
+              {/* Shopping Bag Trigger */}
               <button
                 type="button"
                 onClick={openDrawer}
-                className="relative p-1.5 text-[#191919] hover:opacity-70 transition-opacity cursor-pointer focus-visible:outline-hidden flex items-center gap-2"
+                className="relative p-2 -mr-1 text-[#191919] hover:opacity-70 transition-opacity cursor-pointer focus-visible:outline-hidden flex items-center gap-2"
                 aria-label={`Shopping bag, ${cartCount} items`}
               >
                 <div className="relative">
                   <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
                   {cartCount > 0 && (
-                    <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#191919] text-[#FAF9F5] text-[9px] font-semibold flex items-center justify-center tabular-nums animate-scale-in">
+                    <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#191919] text-[#FAF9F5] text-[9px] font-semibold flex items-center justify-center tabular-nums animate-scale-in">
                       {cartCount}
                     </span>
                   )}
