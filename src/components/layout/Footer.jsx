@@ -131,12 +131,6 @@ export default function Footer() {
                     Careers
                   </Link>
                 </li>
-                <li>
-                  <Link to="/admin" className="hover:text-white text-[#D4CCC0] font-medium transition-colors flex items-center gap-1 pt-1">
-                    Atelier Admin Console
-                    <ArrowUpRight className="w-3 h-3 text-[#A69E8F]" />
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -193,42 +187,6 @@ export default function Footer() {
               </ul>
             </div>
 
-          </div>
-        </div>
-
-        {/* Atelier Merchant Console Demo Banner in Footer */}
-        <div className="my-10 p-5 bg-[#1B1917] border border-[#2E2A26] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
-            <div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#D4AF37] block">
-                Store Administrator Portal
-              </span>
-              <h5 className="font-serif-luxury text-base sm:text-lg text-white font-normal">
-                FILLKART Atelier Merchant Operating System
-              </h5>
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <Link
-              to="/admin"
-              className="px-3.5 py-1.5 bg-[#FAF9F5] text-[#191919] hover:bg-white text-[11px] uppercase tracking-wider font-semibold transition-colors flex items-center gap-1.5 shadow-xs"
-            >
-              <span>Launch Admin Console</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-            <Link
-              to="/admin/products"
-              className="px-3 py-1.5 bg-[#262320] text-[#D8D2C6] hover:text-white hover:bg-[#332E2A] text-[10.5px] uppercase tracking-wider font-mono transition-colors"
-            >
-              Catalog (28 SKUs)
-            </Link>
-            <Link
-              to="/admin/orders"
-              className="px-3 py-1.5 bg-[#262320] text-[#D8D2C6] hover:text-white hover:bg-[#332E2A] text-[10.5px] uppercase tracking-wider font-mono transition-colors"
-            >
-              Live Orders
-            </Link>
           </div>
         </div>
 

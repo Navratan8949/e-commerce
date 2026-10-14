@@ -27,6 +27,7 @@ import OrderSuccessPage from "./pages/OrderSuccessPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import FaqPage from "./pages/FaqPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 import AccountLayout from "./pages/account/AccountLayout.jsx";
@@ -124,12 +125,17 @@ export default function App() {
                         <Route path="settings" element={<AdminSettings />} />
                       </Route>
 
+                      {/* Standalone Authentication Experience */}
+                      <Route path="/login" element={<LoginPage />} />
+                      <Route path="/dashboard" element={<Navigate to="/admin" replace />} />
+
                       {/* Client Storefront Experience (Wrapped in Client Layout) */}
                       <Route
                         path="/*"
                         element={
                           <Layout>
                             <Routes>
+                              <Route path="/login" element={<LoginPage />} />
                               <Route path="/" element={<HomePage />} />
                               <Route path="/shop" element={<ShopPage />} />
                               <Route

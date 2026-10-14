@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Sliders } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MESSAGES = [
   {
@@ -12,8 +11,8 @@ const MESSAGES = [
     mobile: 'SPRING / SUMMER 2026  •  FRENCH FLAX & CASHMERE'
   },
   {
-    desktop: '✦ ATELIER MERCHANT CONSOLE ONLINE  •  MANAGE CATALOG, ORDERS & DISCOUNTS',
-    mobile: '✦ ATELIER ADMIN  •  MANAGE CATALOG & ORDERS'
+    desktop: 'COMPLIMENTARY BESPOKE GIFT BOX & SIGNATURE ATELIER PACKAGING ON ORDERS OVER ₹5,000',
+    mobile: 'COMPLIMENTARY LUXURY PACKAGING ABOVE ₹5,000'
   }
 ];
 
@@ -56,21 +55,11 @@ export default function AnnouncementBar() {
         {/* Subtle Next button */}
         <button
           onClick={handleNext}
-          className="text-[#888] hover:text-white transition-colors p-1 shrink-0"
+          className="text-[#888] hover:text-white transition-colors p-1 shrink-0 cursor-pointer"
           aria-label="Next announcement"
         >
           <ChevronRight className="w-3.5 h-3.5" />
         </button>
-
-        {/* Direct Admin Console Link */}
-        <Link
-          to="/admin"
-          className="hidden md:inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#FAF9F5]/10 hover:bg-[#FAF9F5]/20 text-[#FAF9F5] text-[9.5px] tracking-[0.16em] uppercase font-mono border border-white/20 transition-all shrink-0 ml-2"
-          title="Open Atelier Admin Console"
-        >
-          <Sliders className="w-2.5 h-2.5 text-[#D4AF37]" />
-          <span>Atelier Admin</span>
-        </Link>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ import EditorialBanner from '../components/home/EditorialBanner.jsx';
 import PromoSplit from '../components/home/PromoSplit.jsx';
 import ProvenanceMap from '../components/home/ProvenanceMap.jsx';
 import BrandStory from '../components/home/BrandStory.jsx';
-import AtelierConsoleShowcase from '../components/home/AtelierConsoleShowcase.jsx';
 import InstagramGrid from '../components/home/InstagramGrid.jsx';
 import Newsletter from '../components/home/Newsletter.jsx';
 import ProductCard from '../components/product/ProductCard.jsx';
@@ -140,10 +139,7 @@ export default function HomePage({ onQuickView }) {
       {/* 8. Material Provenance Lineage */}
       <ProvenanceMap />
 
-      {/* 9. Atelier Merchant OS Showcase */}
-      <AtelierConsoleShowcase />
-
-      {/* 10. Brand Story Section */}
+      {/* 9. Brand Story Section */}
       <BrandStory />
 
       {/* 10. Instagram Section */}

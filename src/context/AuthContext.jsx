@@ -2,13 +2,18 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { storage } from '../lib/storage.js';
 import { initialOrders } from '../data/orders.js';
 import { generateOrderId } from '../lib/utils.js';
+import { ECOMMERCE_DEMO_USERS } from '../data/demoUsers.js';
 
 const AuthContext = createContext(null);
 
 const DEFAULT_USER = {
-  fullName: 'Eleanor Vance',
-  email: 'eleanor.vance@fillkart.com',
+  fullName: 'Alexander Vance',
+  email: 'admin@fillkart.com',
   phone: '+91 98201 44521',
+  role: 'super_admin',
+  roleName: 'Atelier Director / Super Admin',
+  badge: 'Super Admin',
+  avatar: 'AV',
   address: 'Penthouse 4B, The Imperial Heights, Worli Sea Face',
   city: 'Mumbai',
   state: 'Maharashtra',
@@ -17,6 +22,10 @@ const DEFAULT_USER = {
 };
 
 export function AuthProvider({ children }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return storage.get('fillkart_auth_state', true);
+  });
+
   const [user, setUser] = useState(() => {
     return storage.get('fillkart_user', DEFAULT_USER);
   });
@@ -26,12 +35,71 @@ export function AuthProvider({ children }) {
   });
 
   useEffect(() => {
+    storage.set('fillkart_auth_state', isAuthenticated);
+  }, [isAuthenticated]);
+
+  useEffect(() => {
     storage.set('fillkart_user', user);
   }, [user]);
 
   useEffect(() => {
     storage.set('fillkart_orders', orders);
   }, [orders]);
+
+  const login = (credentialsOrUser) => {
+    let matchedUser = null;
+
+    if (typeof credentialsOrUser === 'string') {
+      matchedUser = ECOMMERCE_DEMO_USERS.find(
+        (u) =>
+          u.roleId === credentialsOrUser ||
+          u.email.toLowerCase() === credentialsOrUser.toLowerCase()
+      ) || ECOMMERCE_DEMO_USERS[0];
+    } else if (credentialsOrUser && credentialsOrUser.roleId) {
+      matchedUser = credentialsOrUser;
+    } else if (credentialsOrUser && credentialsOrUser.email) {
+      matchedUser = ECOMMERCE_DEMO_USERS.find(
+        (u) => u.email.toLowerCase() === credentialsOrUser.email.toLowerCase()
+      );
+      if (!matchedUser) {
+        matchedUser = {
+          id: `user-${Date.now()}`,
+          name: credentialsOrUser.email.split('@')[0],
+          roleId: 'customer_vip',
+          roleName: 'Patron Client',
+          email: credentialsOrUser.email,
+          badge: 'Verified Client',
+          avatar: credentialsOrUser.email.slice(0, 2).toUpperCase(),
+          targetRoute: '/account'
+        };
+      }
+    } else {
+      matchedUser = ECOMMERCE_DEMO_USERS[0];
+    }
+
+    const updatedUserObj = {
+      ...user,
+      fullName: matchedUser.name,
+      email: matchedUser.email,
+      role: matchedUser.roleId,
+      roleName: matchedUser.roleName,
+      badge: matchedUser.badge,
+      avatar: matchedUser.avatar
+    };
+
+    setIsAuthenticated(true);
+    setUser(updatedUserObj);
+    return matchedUser;
+  };
+
+  const logout = () => {
+    setIsAuthenticated(false);
+  };
+
+  const switchDemoUser = (userId) => {
+    const target = ECOMMERCE_DEMO_USERS.find((u) => u.id === userId) || ECOMMERCE_DEMO_USERS[0];
+    return login(target);
+  };
 
   const updateProfile = (updatedFields) => {
     setUser((prev) => ({
@@ -104,13 +172,19 @@ export function AuthProvider({ children }) {
   return (
     <AuthContext.Provider
       value={{
+        isAuthenticated,
         user,
+        currentUser: user,
+        login,
+        logout,
+        switchDemoUser,
         orders,
         updateProfile,
         createOrder,
         updateOrderStatus,
         deleteOrder,
-        getOrderById
+        getOrderById,
+        demoUsers: ECOMMERCE_DEMO_USERS
       }}
     >
       {children}
